@@ -1,0 +1,21 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet author="exam-fram" id="1">
+        <createTable tableName="employee">
+            <column name="name" type="varchar(255)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="supervisor" type="varchar(255)">
+                <constraints foreignKeyName="fk_employee_supervisor" referencedTableName="employee" referencedColumnNames="name"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
+
