@@ -52,7 +52,8 @@ public class RelationService {
             }
         }
         Map<String, Object> out = new HashMap<>();
-        out.put(root, rsubs);
+        if (root != null)
+            out.put(root, rsubs);
         return out;
     }
 
