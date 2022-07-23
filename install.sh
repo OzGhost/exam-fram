@@ -5,6 +5,7 @@ then
     echo "__[xx] Try again with: install.sh <passwd>"
     exit 1
 fi
+echo "__[o0] Preparing ..."
 docker rm -f exam-fram-app &> /dev/null
 docker rm -f mun-db &> /dev/null
 docker network rm mun-net &> /dev/null

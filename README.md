@@ -15,7 +15,7 @@ The instruction was design for Linux, if you try it on Window or MacOS then it m
 ```
 - Start the application
 ```
-docker start mun-db && docker start exam-fram-app
+docker start mun-db && sleep 5 && docker start exam-fram-app
 ```
 - Test the application with curl (example below)
 ```
@@ -34,5 +34,5 @@ curl -i -u personia:<passwd> http://localhost:1912/relations/ \
 curl -i -u personia:<passwd> http://localhost:1912/relations/
 
 #query supervisors
-curl -i -u personia:<passwd> http://localhost:1912/employees/Jonas/supervisors
+curl -i -u personia:<passwd> http://localhost:1912/employees/Nick/supervisors
 ```
